@@ -1,0 +1,41 @@
+body{
+    width: 960px; 
+    margin: 0 auto; 
+}
+.left-side{
+    float: left; 
+    width: 450px;
+}
+.right-side{
+    float: right; 
+    width: 450px; 
+}
+.clear{
+  clear: both;
+}
+nav ul li{
+    display: inline-block; 
+    border: 1px solid #000; 
+    padding: 10px 10px; 
+    margin: 5px ;
+}
+
+.by-line{
+    font-size: 10px;
+    color: #9f9595;
+}
+.by-line span:last-child{
+    border-left: 1px solid #9f9595;
+    padding-left: 10px;
+}
+.by-line span:first-child{
+    padding-right: 8px; 
+}
+#article-title{
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+article p{
+    text-indent: 30px;
+    font-size: 1.25em;
+}
