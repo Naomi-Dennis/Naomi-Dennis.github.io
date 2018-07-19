@@ -56,6 +56,13 @@ article p{
     margin: 0 auto; 
 }
 
-.carousel .carousel-inner img{
+.carousel .carousel-inner img, .carousel-control-prev, .carousel-control-next{
     height: 500px;
+}
+.carousel-control-prev, .carousel-control-next{
+    margin-top: 70px;
+}
+.carousel-caption h3,.carousel-caption h5, .carousel-caption p{
+    display:inline-block;
+    background: rgba(0,0,0,0.3);
 }
