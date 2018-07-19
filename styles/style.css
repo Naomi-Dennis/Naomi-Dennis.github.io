@@ -66,3 +66,10 @@ article p{
     display:inline-block;
     background: rgba(0,0,0,0.3);
 }
+.skills-style{
+    font-size: 1.5em;
+}
+
+.top-buffer{
+    margin-top:50px;
+}
