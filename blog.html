@@ -5,6 +5,9 @@
     </head>
     <link rel="stylesheet" href="styles/style.css">
     <body>
+            <header class="left-side">
+                    <h1>Tidbits</h1>
+                </header>
         <nav class="right-side">
             <ul>
                 <li>Portfolio</li>
@@ -13,18 +16,33 @@
                 <li>Blog</li>
             </ul>
         </nav>
-        <header class="left-side">
-            <h1>Tidbits</h1>
-        </header>
         <hr class="clear"/>
         <main>
             <article>
-                <h2 id="article-title">Creating a Point of Sales in Rails</h2>
+                <h1 id="article-title">Point of Sales Project : Reflection</h1>
                 <div class="by-line">
                         <span>By: Naomi J. Dennis</span>
-                        <span>Jan. 01, 2018</span>
+                        <span>Thursday July, 19th, 2018</span>
                 </div>
-                
+                <p>This week I finished my rails project for The Flatiron School’s web development course. Before starting, I looked at the requirements and began thinking about the best application to create that would both showcase what I’ve learned as well as push me to learn something new. Unlike my previous projects, I wanted to create something that everyone uses and is familar with in some form. I decided on a POS or point of sales system.</p>
+                <h2>What is a point of sales system?</h2>
+                <p>A point of sales system is what you use when you buy things. It’s literally the thing that processes the transaction, keeps track of what you bought within the system, and if it’s a good one, draws basic conclusions based on what you and other customers bought. This includes things like, how many people bought a particular brand, or how many people bought an item from a certain section on a given day.</p>
+                <p>When looking at a POS system, you notice that it’s just a really big calculator that keeps track of a thousand different things. Because I used to work with POS systems every day, I was pretty familar with it’s back end capabilities. Thus, my journey began.</p>
+                <h2>Where to begin?</h2>
+                <p>This was tough for me. Due to experience with my Sinatra and RubyGem project, I knew better than to just jump right in. I began with analyzing large labs done with Flatiron and decided to mimic their paradigm. Unfortunately, because of my limited knowledge of RSPEC, I wasn’t able to fully implement TDD, but I was able to make a crude “RSPEC” using pen and paper.</p>
+                <p>And so, I organized everything into  list of what I needed, and created a map of how each model would work together. After the models came the schema. An important aspect to note, when creating a schema you want it to make sense and not re-invent the wheel. Dutifiully, I re-read the documentation on rake, particularly in how it dealt with relations.</p>
+                <h2>Testing, Efficiency &amp; SQL</h2>
+                <p>The biggest thing I’ve learned from my project is the efficiency of arrays vs SQL statements via ActiveRecord.</p>
+                <p>It all began when I hit my first major roadblock. I was creating the shift report and did not know how categories fit into my new TransactionQuery class. To make a long story short, it ended on figuring out which was faster, totaling the numbers in a list by converting an ActiveRecord::CollectionProxy to a standard array and using inject; or using the built in sum function.</p>
+                <p>I used a simple difference method, recording the time before the action and after the action and returning the difference. I did this for summing the totals for a particular day using the SQL statement and using inject. I found that inject was significantly faster and moved to subsitute injects for summations in the TransactionQuery class, as it will likely add hundreds or thousands (depending on the query) numbers and every millisecond counts!</p>
+                <h2>User Authentication</h2>
+                <p>I employed a simple user authentication system for the native login. It uses a bycrpt to secure passwords. For third party authentication, I decided to use Omniauth as it’s lightweight enough for this project and a lot of widely used companies have an Omniauth gem. The bigguest hurdle I faced when writing user authentication was keeping oauth logins seperate from normal logins and protecting them. Because I can’t get the user’s password and, in the end, I decided against storing any sensitive information about third party users.</p>
+                <p>I won’t detail the method here, but I created a flag of sorts that’s difficult to change once the third party user has been created and added to the database. Although the user will be able to log in via multiple oauth agents, as it simply checks against emails; no one will be able to access his or her account without going through third party authentication that’s been <em>explicitly</em> specified.</p>
+                <h2>To the Future!</h2>
+                <p>I really liked creating this application. It was challenging and I have tons of ideas that will make it something others could use professionally in the future. I hope to to add JavaScript and CSS (the right way!) to it; as well as third party analytics libraries like Google Analytics.</p>
+                <h2>Try it yourself!</h2>
+                <p>Wonder what my application looks like?</p>
+                <p><a href="https://murmuring-forest-34929.herokuapp.com/">Click here to try it out!</a></p>
            </article>
         </main>
     </body>
