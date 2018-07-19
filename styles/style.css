@@ -1,17 +1,20 @@
 body{
-    width: 960px; 
+    width: 1600px;
     margin: 0 auto; 
 }
 .left-side{
     float: left; 
-    width: 450px;
+    width: 799px;
 }
 .right-side{
     float: right; 
-    width: 450px; 
+    width: 799px; 
 }
 .clear{
   clear: both;
+}
+nav{
+    text-align: right; 
 }
 nav ul li{
     display: inline-block; 
@@ -19,6 +22,15 @@ nav ul li{
     padding: 10px 10px; 
     margin: 5px ;
 }
+nav ul li a, nav ul li a:visited{
+    text-decoration: none; 
+    color:#000;
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+}
+
 
 .by-line{
     font-size: 10px;
@@ -38,4 +50,12 @@ nav ul li{
 article p{
     text-indent: 30px;
     font-size: 1.25em;
+}
+
+.carousel{
+    margin: 0 auto; 
+}
+
+.carousel .carousel-inner img{
+    height: 500px;
 }
