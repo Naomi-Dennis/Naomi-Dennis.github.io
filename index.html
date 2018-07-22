@@ -12,11 +12,10 @@
 </head>
 <body>
     <!-- Nav Bar-->
-    <header class="left-side">
-        <h1>Tidbits</h1>
-    </header>
-        <nav class="right-side">
-            <ul>
+    <main>
+
+        <nav >
+            <ul class="right-side">
                 <li><a href="/index.html">Home</a></li>
                 <li><a href="https://github.com/Naomi-Dennis/">Github</a></li>
                 <li><a href="">Portfolio</a></li>
@@ -24,10 +23,11 @@
                 <li><a href="https://learn.co/Naomi-Dennis/resume">Resume</a></li>
             </ul>
         </nav>
+     
     <div class="clear"></div>
     <!-- -->
     <!-- Carousel -->
-    <h1>Portfolio</h1>
+  </main>
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -50,6 +50,7 @@
                 <div class="carousel-caption d-none d-md-block">
                         <h3>RSS Reader</h3><br/>
                         <h5>A lightweight RSS reader.</h5><br/>
+                        <p>Portfolio Project</p>
                       </div>
               </div>
               <div class="carousel-item">
@@ -61,10 +62,10 @@
                       </div>
               </div>
               <div class="carousel-item">
-                  <a href="https://github.com/Naomi-Dennis/Front-End-Project-1" target="_blank"><img class="d-block w-100" src="assets/images/blog/blog-carousel.jpeg" alt="Third slide"></a>
+                  <a href="https://github.com/Naomi-Dennis/Front-End-Project-1" target="_blank"><img class="d-block w-100" src="assets/images/blog/adobe-photoshop-logo.jpg" alt="Third slide"></a>
                   <div class="carousel-caption d-none d-md-block">
-                          <h5>PSD to HTML Conversion</HTml></h5>
-                          <p>A complete website converted from a Photoshop wireframe.</p>
+                          <h3>Blitz Conversion</h3><br/>
+                          <h5>A complete website converted from a Photoshop wireframe.</h5><br/>
                           <p>Portfolio Project</p>
                         </div>
                 </div>
@@ -73,7 +74,7 @@
                     <div class="carousel-caption d-none d-md-block">
                             <h3>Tidbits</h3><br/>
                             <h5>Read about development progress for my projects.</h5><br/>
-                            
+                            <p>Blog</p>
                           </div>
                   </div>
               </div>
@@ -90,7 +91,7 @@
             </a>
           </div>
     <!-- -->
-
+<main>
     <!-- Skills -->
     <section>
     <h2 class="top-buffer">Skills</h2>
@@ -98,37 +99,47 @@
      
         <div class="row">
           <div class="col-lg-4">
-            <h3>Foundation</h3>
-              <ul>
-                <li>HTML 5</li>
-                <li>JavaScript</li>
-                    <ul><li>JQuery</li></ul>
-                <li>CSS3</li>
-                    <ul><li>SCSS</li></ul>
-                <li>Ruby</li>
-                <li>C++</li>
-                <li>Python</li>
-              </ul>
+            <div class="list-container">
+              <h3>Foundation</h3>
+                <ul class="left-side">
+                  <li>HTML 5</li>
+                  <li>JavaScript</li>
+                      <ul><li>JQuery</li></ul>
+                  <li>CSS3</li>
+                      <ul><li>SCSS</li></ul>
+                      </ul>
+                      <ul class="right-side">
+                  <li>Ruby</li>
+                  <li>C++</li>
+                  <li>Python</li>
+                </ul>
+                <div class="clear"></div>
+            </div>
           </div>
 
           <div class="col-lg-4">
+              <div class="list-container">
            <h3>Front End Frameworks</h3>
             <ul>
               <li>React</li>
               <li>AngularJS</li>
             </ul>
+            </div>
           </div>
 
           <div class="col-lg-4">
+              <div class="list-container">
           <h3>Full Stack Frameworks</h3>
             <ul>
               <li>Ruby on Rails</li>
               <li>ExpressJS</li>
             </ul>
           </div>
+          </div>
         </div>
         <div class="row top-buffer">
           <div class="col-lg-4">
+          <div class="list-container">
           <h3>Package Managers</h3>
       
             <ul>
@@ -136,40 +147,46 @@
               <li>NodeJS</li>
             </ul>
           </div>
+      </div>
 
           <div class="col-lg-4">
+              <div class="list-container">
           <h3>Version Control</h3>
               <ul>
                 <li>Git</li>
               </ul>
+              </div>
           </div>
 
         </div>
     </div>
    </section>
     <!-- Education -->
-    <hr/>
     <section>
       <h2>Education</h2>
-      <div class="container">
+      <div class="container top-buffer">
         <div class="row">
           <div class="col-lg-6">
+              <div class="list-container">
             <h3>The Flatiron School Coding Bootcamp</h3>
             <ul>
               <li>Full Stack Web Development - 2018</li>
             </ul>
           </div>
+          </div>
           <div class="col-lg-6">
+              <div class="list-container">
             <h3>New York University</h3>
             <ul>
               <li>Certificate General Studies - 2013</li>
-              <li>Bachelors of Computer Science and Engineering (3/4 years completed) - 2017</li>
+              <li>B.S of Computer Science and Engineering - Ongoing</li>
             </ul>
+            </div>
          </div>
        </div>
      </div>
   </section>
-
+</main>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

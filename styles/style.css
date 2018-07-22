@@ -2,6 +2,23 @@ body{
     width: 100%;
     margin: 0 auto; 
 }
+main{
+    width: 70%; 
+    margin: 0 auto; 
+}
+main h1, main h2, main{
+    text-align: center; 
+}
+ main h2{
+    background: #ccc6c6;
+}
+main .row  div[class^="col-lg"] .list-container{
+    background: #ffffff;
+}
+main .row div[class^="col-lg"] .list-container h3{
+    text-align:center; 
+    text-decoration:underline; 
+}
 .left-side{
     float: left; 
     width: 48%;
@@ -21,6 +38,7 @@ nav ul li{
     border: 1px solid #000; 
     padding: 10px 10px; 
     margin: 5px ;
+    background: #fff;
 }
 nav ul li a, nav ul li a:visited{
     text-decoration: none; 
@@ -43,13 +61,11 @@ nav ul li:hover{
 .by-line span:first-child{
     padding-right: 8px; 
 }
-#article-title{
-    font-size: 3em;
-    margin-bottom: 10px;
-}
+
 article p{
     text-indent: 30px;
     font-size: 1.25em;
+    text-align: left; 
 }
 
 .carousel{
@@ -57,7 +73,7 @@ article p{
 }
 
 .carousel .carousel-inner img, .carousel-control-prev, .carousel-control-next{
-    height: 500px;
+    height: 800px;
 }
 .carousel-control-prev, .carousel-control-next{
     margin-top: 70px;
@@ -71,13 +87,12 @@ article p{
 }
 
 .top-buffer{
-    margin-top:50px;
+    margin-top:25px;
 }
 .blog-article{
     width: 70%;
     margin: 0 auto;
 }
-
 
 .blog-pic{
     width: 100%;
@@ -87,4 +102,20 @@ article p{
 .main-bar{
     position:fixed; 
     top: 0;
+}
+
+header #article-title{
+    text-align: left; 
+    font-size: 100px;
+}
+header h2{
+    text-align: left; 
+    background-color: #fff; 
+    color: rgba(0,0,0,0.3);
+    font-style: italic;
+}
+
+main ul li{
+    font-size: 20px; 
+    text-align:left;
 }
