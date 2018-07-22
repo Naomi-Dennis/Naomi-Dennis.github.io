@@ -2,6 +2,9 @@
 <html>
     <head>
         <title>Tidbits by Naomi Dennis</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/style.css" >
+        <link rel="stylesheet" href="styles/responsive.css" >
     </head>
     <link rel="stylesheet" href="styles/style.css">
     <body>
@@ -10,21 +13,24 @@
                 </header>
         <nav class="right-side">
             <ul>
-                <li>Portfolio</li>
-                <li>Github</li>
-                <li>Resume</li>
-                <li>Blog</li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="https://github.com/Naomi-Dennis/">Github</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="https://learn.co/Naomi-Dennis/resume">Resume</a></li>
             </ul>
         </nav>
         <hr class="clear"/>
         <main>
-            <article>
+          <img src="assets/images/blog/pos_rails_project_pic.jpg" class="blog-pic">
+          <hr/>
+            <article class="blog-article">
                 <h1 id="article-title">Point of Sales Project : Reflection</h1>
                 <div class="by-line">
                         <span>By: Naomi J. Dennis</span>
                         <span>Thursday July, 19th, 2018</span>
                 </div>
-                <p>This week I finished my rails project for The Flatiron School’s web development course. Before starting, I looked at the requirements and began thinking about the best application to create that would both showcase what I’ve learned as well as push me to learn something new. Unlike my previous projects, I wanted to create something that everyone uses and is familar with in some form. I decided on a POS or point of sales system.</p>
+                <p class="top-buffer">This week I finished my rails project for The Flatiron School’s web development course. Before starting, I looked at the requirements and began thinking about the best application to create that would both showcase what I’ve learned as well as push me to learn something new. Unlike my previous projects, I wanted to create something that everyone uses and is familar with in some form. I decided on a POS or point of sales system.</p>
                 <h2>What is a point of sales system?</h2>
                 <p>A point of sales system is what you use when you buy things. It’s literally the thing that processes the transaction, keeps track of what you bought within the system, and if it’s a good one, draws basic conclusions based on what you and other customers bought. This includes things like, how many people bought a particular brand, or how many people bought an item from a certain section on a given day.</p>
                 <p>When looking at a POS system, you notice that it’s just a really big calculator that keeps track of a thousand different things. Because I used to work with POS systems every day, I was pretty familar with it’s back end capabilities. Thus, my journey began.</p>
@@ -45,5 +51,9 @@
                 <p><a href="https://murmuring-forest-34929.herokuapp.com/">Click here to try it out!</a></p>
            </article>
         </main>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
