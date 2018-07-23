@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+         <meta charset="UTF-8">
         <title>Tidbits by Naomi Dennis</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="styles/main.css" >
@@ -9,54 +10,8 @@
         <link rel="stylesheet" href="styles/blog_styles.css">
     </head>
     <body>
-    
-                    <nav >
-                            <ul class="clear-botttom-gap" >
-                                <li><a href="./index.html">Home</a></li>
-                                <li><a href="https://github.com/Naomi-Dennis/"  target="_blank">Github</a></li>
-                                <li><a href="">Portfolio</a></li>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="https://learn.co/Naomi-Dennis/resume" target="_blank">Resume</a></li>
-                            </ul>
-                        </nav >
-                     
-                        <img src="assets/images/blog/pos_rails_project_pic.jpg" class="blog-pic">
-           <main>
-          <hr/>
-            <article class="blog-article">
-                <header>
-                    <h1 id="article-title">Point of Sales Project</h1>
-                    <h2>A Reflection</h2>
-                </header>
-                <div class="by-line">
-                        <span>By: Naomi J. Dennis</span>
-                        <span>Thursday July, 19th, 2018</span>
-                </div>
-                <p style="margin-top: 10px">This week I finished my rails project for The Flatiron School’s web development course. Before starting, I looked at the requirements and began thinking about the best application to create that would both showcase what I’ve learned as well as push me to learn something new. Unlike my previous projects, I wanted to create something that everyone uses and is familar with in some form. I decided on a POS or point of sales system.</p>
-                <h2>What is a point of sales system?</h2>
-                <p>A point of sales system is what you use when you buy things. It’s literally the thing that processes the transaction, keeps track of what you bought within the system, and if it’s a good one, draws basic conclusions based on what you and other customers bought. This includes things like, how many people bought a particular brand, or how many people bought an item from a certain section on a given day.
-                When looking at a POS system, you notice that it’s just a really big calculator that keeps track of a thousand different things. Because I used to work with POS systems every day, I was pretty familar with it’s back end capabilities. Thus, my journey began.</p>
-                <h2>Where to begin?</h2>
-                <p>This was tough for me. Due to experience with my Sinatra and RubyGem project, I knew better than to just jump right in. I began with analyzing large labs done with Flatiron and decided to mimic their paradigm. Unfortunately, because of my limited knowledge of RSPEC, I wasn’t able to fully implement TDD, but I was able to make a crude “RSPEC” using pen and paper.
-                And so, I organized everything into  list of what I needed, and created a map of how each model would work together. After the models came the schema. An important aspect to note, when creating a schema you want it to make sense and not re-invent the wheel. Dutifiully, I re-read the documentation on rake, particularly in how it dealt with relations.</p>
-                <h2>Testing, Efficiency &amp; SQL</h2>
-                <p>The biggest thing I’ve learned from my project is the efficiency of arrays vs SQL statements via ActiveRecord.
-                It all began when I hit my first major roadblock. I was creating the shift report and did not know how categories fit into my new TransactionQuery class. To make a long story short, it ended on figuring out which was faster, totaling the numbers in a list by converting an <code>ActiveRecord::CollectionProxy</code> to a standard array and using inject; or using the built in sum function.</p>
-                <p>I used a simple difference method, recording the time before the action and after the action and returning the difference. I did this for summing the totals for a particular day using the SQL statement and using inject. I found that inject was significantly faster and moved to subsitute injects for summations in the TransactionQuery class, as it will likely add hundreds or thousands (depending on the query) numbers and every millisecond counts!</p>
-                <h2>User Authentication</h2>
-                <p>I employed a simple user authentication system for the native login. It uses a bycrpt to secure passwords. For third party authentication, I decided to use Omniauth as it’s lightweight enough for this project and a lot of widely used companies have an Omniauth gem. The bigguest hurdle I faced when writing user authentication was keeping oauth logins seperate from normal logins and protecting them. Because I can’t get the user’s password and, in the end, I decided against storing any sensitive information about third party users.</p>
-                <p>I won’t detail the method here, but I created a flag of sorts that’s difficult to change once the third party user has been created and added to the database. Although the user will be able to log in via multiple oauth agents, as it simply checks against emails; no one will be able to access his or her account without going through third party authentication that’s been <em>explicitly</em> specified.</p>
-                <h2>To the Future!</h2>
-                <p>I really liked creating this application. It was challenging and I have tons of ideas that will make it something others could use professionally in the future. I hope to to add JavaScript and CSS (the right way!) to it; as well as third party analytics libraries like Google Analytics.</p>
-                <h2>Try it yourself!</h2>
-                <p>Wonder what my application looks like?</p>
-                <p><a href="https://murmuring-forest-34929.herokuapp.com/">Click here to try it out!</a></p>
-           </article>
-        </main>
-        <hr/>
-        <footer>
-            Designed &amp; Developed by Naomi Dennis.
-          </footer>
+          <p>Loading...</p>
+        <script src="assets/javascript/dynamic_blog.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

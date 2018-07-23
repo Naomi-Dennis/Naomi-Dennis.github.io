@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/main.css">
-    <link rel="stylehsheet" href="../styles/generic_styles.css">
+    <link rel="stylesheet" href="../styles/generic_styles.css">
     <link rel="stylesheet" href="../styles/responsive.css">
     <link rel="stylesheet" href="../styles/blog_styles.css">
 </head>
@@ -32,13 +32,13 @@
             </li>
         </ul>
     </nav>
-    <img src='../assets/images/blog/pos_rails_project_pic.jpg' class='blog-pic'>
+    <img src='../assets/images/blog/rails_pipeline.jpg' class='blog-pic'>
     <main>
         <hr/>
         <article class='blog-article'>
             <header>
                 <h1 id='article-title'>Understanding the Rails Pipeline</h1>
-                <h2>A Beginners Guide</h2>
+                <h2 id="article-subtitle">A Beginners Guide</h2>
             </header>
             <div class='by-line'>
                 <span>By: Naomi J. Dennis</span>
@@ -189,11 +189,22 @@
             </p>
             <p>Of course you can denote the environment by preceeded this with RAILS_ENV=’’</p>
         </article>
+        <div class="top-buffer">
+                <div class="left-side">
+                    <button type="button" class="btn btn-secondary" id="prev-button">Previous Blog Post</button>
+                </div>
+                <div class="right-side">
+                    <button type="button" class="btn btn-secondary" id="next-button">Next Blog Post</button>
+                </div>
+    
+                <div class="clear"></div>
+            </div>
     </main>
     <hr/>
     <footer>
         Designed &amp; Developed by Naomi Dennis.
     </footer>
+    <script src="../assets/javascript/dynamic_blog.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
