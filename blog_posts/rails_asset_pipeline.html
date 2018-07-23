@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tidbits by Naomi Dennis</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylehsheet" href="../styles/generic_styles.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/blog_styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul class='clear-botttom-gap'>
+            <li>
+                <a href='../index.html'>Home</a>
+            </li>
+            <li>
+                <a href='https://github.com/Naomi-Dennis/' target='_blank'>Github</a>
+            </li>
+            <li>
+                <a href=''>Portfolio</a>
+            </li>
+            <li>
+                <a href='../blog.html'>Blog</a>
+            </li>
+            <li>
+                <a href='https://learn.co/Naomi-Dennis/resume' target='_blank'>Resume</a>
+            </li>
+        </ul>
+    </nav>
+    <img src='../assets/images/blog/pos_rails_project_pic.jpg' class='blog-pic'>
+    <main>
+        <hr/>
+        <article class='blog-article'>
+            <header>
+                <h1 id='article-title'>Understanding the Rails Pipeline</h1>
+                <h2>A Beginners Guide</h2>
+            </header>
+            <div class='by-line'>
+                <span>By: Naomi J. Dennis</span>
+                <span>Monday July, 23rd, 2018</span>
+            </div>
+            <h2>
+                <a id="What_is_it_0"></a>What is it?</h2>
+            <p>The rails asset pipeline is a built in tool that implements files. Primarily, it is used for images, scripts
+                and stylesheets.</p>
+            <h2>
+                <a id="How_to_include_files_3"></a>How to include files</h2>
+            <p>When generating a Rails project, Rails will include the necessary lines to import all stylesheets and scripts.
+                <br> It will look like the following:</p>
+            <pre><code> &lt;%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %&gt;
+&lt;%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %&gt;
+            </code></pre>
+            <p>Do not touch this.</p>
+            <p>Next, you will copy all your scripts and stylesheets into the app &gt; assets folder. There are stylesheet and
+                Javascript folders already available, you can paste your scripts in their respective folders. If you have
+                any images, you can include them in the images folder. Please note, if the extension says
+                <code>.scss</code> instead of
+                <code>.css</code>, your code will still read properly and can be included in the same directory. The other file
+                is a sass file, which is an extension of CSS.</p>
+            <p>For this excercise, I suggest starting with very simple code that does not reference one another because Rails
+                is very particular about how to do it. If you do not know what to use, you can use the files I’ve included
+                here:</p>
+            <ul>
+                <li>
+                    <a href="https://pastebin.com/tZruc58R" target="_blank">CSS</a>
+                </li>
+                <li>
+                    <a href="https://pastebin.com/D2Gd0NLM" target="_blank">JavaScript</a>
+                </li>
+            </ul>
+            <p>Put these in the
+                <code>stylehseets/style.css</code> and
+                <code>javascripts/script.js</code> files respectively. Now, run your server and you should see your CSS and Javascript
+                files on your site.</p>
+            <h2>
+                <a id="Referencing_assets_21"></a>Referencing assets</h2>
+            <p>Next, we will look at referencing other code (images in CSS and using Javascript inline functions).</p>
+            <h4>
+                <a id="CSS_25"></a>CSS</h4>
+            <p>To add other files to a CSS property, such as a custom font or an image, simply use the image name and extension
+                preceded by the asset_path function. To use this function, you will need to rename your css/scss file to
+                <code>.css.erb</code>/
+                <code>.scss.erb.</code>
+            </p>
+            <p>In the end, your code should look something like this:
+                <br>
+                <code>background: url(&lt;%= asset_path &quot;bkgrnd.jpeg&quot; %&gt;)</code>
+            </p>
+            <h4>
+                <a id="Images_32"></a>Images</h4>
+            <p>If you want to use put an image directly into a web page, like in an image tag; you would include it in a similar
+                way.
+                <br>
+                <code>&lt;img src=&quot;&lt;%= asset_path &quot;bkgrnd.jpeg&quot; %&gt;&quot; &gt;</code>
+            </p>
+            <h4>
+                <a id="JavaScript_37"></a>JavaScript</h4>
+            <p>If you want to use inline script tags to create an onclick event, you can define the function used like so:
+                <br> &lt;button onclick=&quot;&lt;%= “welcome();”%&gt;&quot;&gt;Greetings&lt;/button&gt;</p>
+            <h2>
+                <a id="Why_does_this_work_41"></a>Why does this work?</h2>
+            <h4>
+                <a id="Theory_Behind_the_Pipeline_43"></a>Theory Behind the Pipeline</h4>
+            <p>Without getting into too much detail, the Rails asset pipeline is built on the sprocket gem. It is automatically
+                included in all rails projects unless stated otherwise. The purpose of the pipeline is to compress all script
+                and Javascript files into one master file and to give the ability to use language preprocessors like scss
+                and erb. Hence the single include stylesheet and script lines included in the layout.</p>
+            <p>Rails also uses a system called fingerprinting to ensure that files are only downloaded to the browser’s cache
+                when the files content changes. This increases efficiency.</p>
+            <h4>
+                <a id="Why_the_Path_is_not_Needed_48"></a>Why the Path is not Needed</h4>
+            <p>Why didn’t we need a relative path to find our image in the examples above? Because the pipeline uses “Rails
+                magic” includes them based on the pipeline. When you use the function asset_path the Rails checks all the
+                folders in the pipeline until it finds the appropriate path.</p>
+            <h4>
+                <a id="Organization_51"></a>Organization</h4>
+            <p>One last important aspect of the Rails pipeline is the organization. There are three public folders the pipeline
+                references:</p>
+            <ul>
+                <li>lib/assets
+                    <ul>
+                        <li>Non-frameworks written by you or your team, but is shared between various applications also written
+                            by you or your team.</li>
+                    </ul>
+                </li>
+                <li>vendor/assets
+                    <ul>
+                        <li>For JavaScript and CSS frameworks (think jQuery and Bootstrap)</li>
+                    </ul>
+                </li>
+                <li>app/assets
+                    <ul>
+                        <li>JavaScript and CSS functions you wrote that will be directly used in the application.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>
+                <a id="Advanced_61"></a>Advanced</h2>
+            <h4>
+                <a id="Understanding_manifest_files_63"></a>Understanding Manifest Files</h4>
+            <p>Manifest files are used to say what you want included in the asset pipeline. There is a single manifest file
+                for CSS and for Javascript. They have slightly different syntax from one another, but the concept is the
+                same. You will notice that each manifest file already has code in it. Now, automatically, both files will
+                include everything in the entire pipeline. These files are useful for organizing what you want included.</p>
+            <p>Each line begins with a require statement. If you want to include a single file, you would use:
+                <br>
+                <code>require [name_of_file_without extension].</code>
+            </p>
+            <p>For example:
+                <br>
+                <code>//= require pb_living</code>
+            </p>
+            <p>This will automatically find a file in the pipeline named pb_living.js. If this file were in a subfolder of Javascript,
+                you would need to include the relative path. For example:
+                <br>
+                <code>//= require ./myscripts/pb_living</code>
+            </p>
+            <p>To include entire directories you would use:
+                <br>
+                <code>//= require_tree ./[relative_path_to_directory_name]</code>
+            </p>
+            <p>Note, that we are using a path here. This is what you use to create the pipeline. The
+                <code>require_tree</code> directive tells Rails to include everything in the specified directory recursively (meaning
+                to include all subfolders and files).</p>
+            <p>To include everything in your directory, recursively, use:
+                <br>
+                <code>//= require_tree .</code>
+            </p>
+            <p>You can also include everything in a directory non-recursively (meaning everything in that folder, NOT including
+                subfolders, etc.). That directive is called require_directive
+                <br>
+                <code>//= require_directive ./[relative_path_to_directory_name]</code>
+            </p>
+            <p>These require statements will include everything from top to bottom. There isn’t any documentation on how require_tree
+                . includes files. To be safe, include any necessary files that need to be compiled before any others explicitly.</p>
+            <h4>
+                <a id="On_Preprocessing_88"></a>On Preprocessing</h4>
+            <p>Precompilning your assets is useful as the browser can run your application quicker. The act of precompiling
+                means to put a file in the intermediate stage of compiling. If you edit your files again after precompiling,
+                you will need to precompile again.</p>
+            <p>To precompile your assets use:
+                <br>
+                <code>rails assets:precompile</code>
+            </p>
+            <p>Of course you can denote the environment by preceeded this with RAILS_ENV=’’</p>
+        </article>
+    </main>
+    <hr/>
+    <footer>
+        Designed &amp; Developed by Naomi Dennis.
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

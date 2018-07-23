@@ -1,0 +1,16 @@
+.carousel{
+    margin: 0 auto; 
+}
+
+.carousel .carousel-inner img, .carousel-control-prev, .carousel-control-next{
+    height: 920px;
+    margin-top: 40px; 
+}
+.carousel-control-prev, .carousel-control-next{
+    margin-top: 70px;
+}
+.carousel-caption h3,.carousel-caption h5, .carousel-caption p{
+    display:inline-block;
+    background: rgba(0,0,0,0.5);
+    font-size: 2em;
+}

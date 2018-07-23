@@ -1,0 +1,30 @@
+
+.clear-top-gap{
+    margin-top: 0;
+    padding-top: 0;
+}
+.clear-bottom-gap{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.left-side{
+    float: left; 
+    width: 48%;
+}
+.right-side{
+    float: right; 
+    width:48%; 
+}
+.clear{
+  clear: both;
+}
+.top-buffer{
+    margin-top:25px;
+}
+
+footer{
+    padding: 20px 20px;
+}
+section p{
+    text-indent: 100px; 
+}

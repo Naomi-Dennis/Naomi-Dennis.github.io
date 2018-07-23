@@ -1,0 +1,77 @@
+body{
+    width: 100%;
+    margin: 0 auto; 
+}
+main, footer{
+    width: 70%; 
+    margin: 0 auto; 
+}
+main h1, main h2, main, footer{
+    text-align: center; 
+}
+ main h2, .section-title{
+    background: #ccc6c6;
+}
+main .row  div[class^="col-"] .list-container{
+    background: #ffffff;
+}
+main .row div[class^="col-"] .list-container h3{
+    text-align:center; 
+    text-decoration:underline; 
+}
+nav ul{
+    text-align: right;
+    background: #ccc6c6;
+    width: 100%; 
+    position: fixed;
+    z-index:999;
+    padding-bottom: 10px; 
+
+}
+nav ul li{
+    display: inline-block; 
+    margin: 0px 20px; 
+    font-size: 1.3em;
+   
+}
+nav ul li a, nav ul li a:visited{
+    text-decoration: none; 
+    color:#000;
+    
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+}
+
+.skills-style{
+    font-size: 1.5em;
+}
+
+.main-bar{
+    position:fixed; 
+    top: 0;
+}
+
+header h2{
+    text-align: left; 
+    background-color: #fff; 
+    color: rgba(0,0,0,0.3);
+    font-style: italic;
+}
+main ul li, section p{
+    font-size: 20px; 
+    text-align:left;
+}
+
+#profile-pic{
+    width: 200px;
+    height: 200px; 
+    clip-path: circle(90px at center);
+}
+
+#email-contact{
+    display: block; 
+    padding-top: 20px; 
+    font-size: 2em;
+}
