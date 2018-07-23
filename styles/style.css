@@ -9,7 +9,7 @@ main{
 main h1, main h2, main{
     text-align: center; 
 }
- main h2{
+ main h2, .section-title{
     background: #ccc6c6;
 }
 main .row  div[class^="col-lg"] .list-container{
@@ -115,7 +115,15 @@ header h2{
     font-style: italic;
 }
 
-main ul li{
+main ul li, section p{
     font-size: 20px; 
     text-align:left;
+}
+section p{
+    text-indent: 100px; 
+}
+#profile-pic{
+    width: 200px;
+    height: 200px; 
+    clip-path: circle(90px at center);
 }
