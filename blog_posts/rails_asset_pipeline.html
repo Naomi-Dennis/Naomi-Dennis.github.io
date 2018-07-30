@@ -52,8 +52,9 @@
                 <a id="How_to_include_files_3"></a>How to include files</h2>
             <p>When generating a Rails project, Rails will include the necessary lines to import all stylesheets and scripts.
                 <br> It will look like the following:</p>
-            <pre><code> &lt;%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %&gt;
-&lt;%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %&gt;
+            <pre><code> 
+                <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+                <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
             </code></pre>
             <p>Do not touch this.</p>
             <p>Next, you will copy all your scripts and stylesheets into the app &gt; assets folder. There are stylesheet and

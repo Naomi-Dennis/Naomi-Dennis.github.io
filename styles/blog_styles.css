@@ -36,6 +36,10 @@ header #article-subtitle{
 .blog-article h2{
     margin-bottom: 20px;  
     color: white; 
+    background: #000;
+    font-style:unset;
+    text-align:center; 
+    text-transform: capitalize;
 }
 .blog-article h4{
     font-weight: bold;
