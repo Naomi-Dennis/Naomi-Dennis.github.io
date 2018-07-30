@@ -4,6 +4,7 @@ var loc = ''
 var current_page = 0; 
 var blog_names = [] 
 blog_names = [
+    'js_string_template.html',
     'rails_asset_pipeline.html',
     'pos_system.html'
     

@@ -49,3 +49,6 @@ header #article-subtitle{
 #blog-post-nav-buttons{
     background: #fff;
 }
+article pre{
+    text-align:left; 
+}

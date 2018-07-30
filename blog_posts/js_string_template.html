@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tidbits by Naomi Dennis</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel='stylesheet' href='../styles/main.css'>
+    <link rel='stylehsheet' href='../styles/generic_styles.css'>
+    <link rel='stylesheet' href='../styles/responsive.css'>
+    <link rel='stylesheet' href='../styles/blog_styles.css'>
+</head>
+
+<body>
+    <nav>
+        <ul class='clear-botttom-gap'>
+            <li>
+                <a href='../index.html'>Home</a>
+            </li>
+            <li>
+                <a href='https://github.com/Naomi-Dennis/' target='_blank'>Github</a>
+            </li>
+            <li>
+                <a href=''>Portfolio</a>
+            </li>
+            <li>
+                <a href='../blog.html'>Blog</a>
+            </li>
+            <li>
+                <a href='https://learn.co/Naomi-Dennis/resume' target='_blank'>Resume</a>
+            </li>
+        </ul>
+    </nav>
+    <img src='../assets/images/blog/pos_rails_project_pic.jpg' class='blog-pic'>
+    <main>
+        <hr/>
+        <article class='blog-article'>
+            <header>
+                <h1 id='article-title'>JavaScript String Templates</h1>
+                <div class="by-line">
+                    <span>By: Naomi J. Dennis</span>
+                    <span>Monday July, 30th, 2018</span>
+                </div>
+                <p>Introduced in ES2015, string templates are a new way to work with strings. Like other programming languages,
+                    like Ruby; string templates come with the following upgrades to regular strings:</p>
+                <ul>
+                    <li>Expression Intropolation</li>
+                    <li>Multiline</li>
+                    <li>Tagged Templates</li>
+                    <li>Nested Templates</li>
+                </ul>
+                <h2>
+                    <a id="Expression_Intropolation_8"></a>Expression Intropolation</h2>
+                <p>Exprssion intropolation is the act of embedding an expression in a string using a simplier synax than (+)
+                    concatation.
+                    <br> Before string templates to concatinate a string, you would need to append it using the plus operator
+                    like so:</p>
+                    <script async src="//jsfiddle.net/needmeatnpotatoes/fy275rvt/2/embed/js/"></script>
+                <p>With expression intropolation, you can embedd the variable like so:</p>
+               <script async src="//jsfiddle.net/needmeatnpotatoes/fy275rvt/1/embed/js/"></script>
+                <p>The best thing about using expression intropolation is it’s more legible. However, the best thing about this
+                    feature is embedding expressions.</p>
+                    <script async src="//jsfiddle.net/needmeatnpotatoes/fy275rvt/6/embed/js/"></script>
+                <h2>
+                    <a id="Multiline_35"></a>Multiline</h2>
+                <p>String templates also read multiline code without the need of an escape sequence.</p>
+                <script async src="//jsfiddle.net/needmeatnpotatoes/fy275rvt/3/embed/js/"></script>
+                <h2>
+                    <a id="Tagged_Templates_49"></a>Tagged Templates</h2>
+                <p>Tagged templates is a very useful feature, as it allows you to pass an extrapolated expression to a function,
+                    in a
+                    <em>very</em> legible way.</p>
+                    <script async src="//jsfiddle.net/needmeatnpotatoes/fy275rvt/5/embed/js/"></script>
+                <p>Templates can also be nested, as string templates are also expressions.</p>
+                <p>As you can see, sring templates are great additions to the JavaScript language.</p>
+
+
+            </header>
+        </article>
+        <div class="top-buffer">
+            <div class="left-side">
+                <button type="button" class="btn btn-secondary" id="prev-button">Previous Blog Post</button>
+            </div>
+            <div class="right-side">
+                <button type="button" class="btn btn-secondary" id="next-button">Next Blog Post</button>
+            </div>
+
+            <div class="clear"></div>
+        </div>
+    </main>
+    <hr/>
+    <footer>
+        Designed &amp; Developed by Naomi Dennis.
+    </footer>
+     <script src="../assets/javascript/dynamic_blog.js"></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN'
+        crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B,Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q'
+        crossorigin='anonymous'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5,76PVCmYl'
+        crossorigin='anonymous'></script>
+</body>
+
+</html>
