@@ -63,3 +63,10 @@
     width: 100%;
     height: 100%; 
 }
+.tech-icons i{
+   
+    font-size: 3em;
+}
+.tech-icons{
+    margin-top: 20px; 
+}
