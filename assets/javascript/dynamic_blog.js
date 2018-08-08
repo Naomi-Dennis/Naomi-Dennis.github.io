@@ -60,7 +60,7 @@ function setOnClick(button_name, page){
 function hideButton(button_id){
     let button = {}
     button = document.getElementById(button_id)
-    button.style = 'display:none'
+    button.style = 'visibility:hidden'
   
 }
 

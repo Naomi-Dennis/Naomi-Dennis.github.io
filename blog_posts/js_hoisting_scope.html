@@ -36,29 +36,215 @@
         <hr/>
         <article class='blog-article'>
             <header>
-                <h1 id='article-title'>JavaScript String Templates</h1>
+                <h1 id='article-title'>JavaScript Hoisting</h1>
+                <h2 id="article-subtitle">A Beginner's Guide</h2>
+
                 <div class="by-line">
                     <span>By: Naomi J. Dennis</span>
                     <span>Monday July, 30th, 2018</span>
                 </div>
+                <p>Hoisting is the act of reading certain data before others. Take the following code:</p>
+                <script src="https://pastebin.com/embed_js/jNnS1m2v"></script>
+                <p>This raises some questisons.</p>
+                <ul>
+                    <li>Why is x undefined?</li>
+                    <li>Why is plus defined?</li>
+                    <li>Why is x undefined when I pass it to console.log, but it is defined when I call plus?</li>
+                </ul>
+                <p>To answer these questions, we need to know a few things about JavaScript.</p>
+                <h1>
+                    <a id="Scope_23"></a>Scope</h1>
+                <p>Scope is the environment variables live in. Depending on where the variable is defined, the scope will be
+                    able to see it.
+                    <br> There are two basic kinds of scope, let’s look at them below. Consider the following example:</p>
+                    <script src="https://pastebin.com/embed_js/YK7cTPr3"></script>
+                <h4>
+                    <a id="Local_32"></a>Local</h4>
+                <p>Local scope is defined within a block. This can be the block of a function decleration, function expression,
+                    for loops, while loops, etc. Local variables are defined within the block and can only be used within
+                    that block. In this case, the local variable is y.</p>
+                <h4>
+                    <a id="Global_36"></a>Global</h4>
+                <p>Global scope is defined outside of any block. Variables, function expressions, funcion declerations, etc.
+                    defined in the global scope can be used within any inner blocks. In this case, the global variable is
+                    x.</p>
+                <h1>
+                    <a id="Stack_40"></a>Stack</h1>
+                <p>When your code is run, all actions are placed on something called a stack. Stack is a data structure that
+                    can be thought of as a stack of plates. If you needed a plate from a stack of plates, you would take
+                    the top plate off the stack and use it. This is how the browser interacts with your code. Before the
+                    browser can interact with the stack, it has to create it. Let’s look at how it does that, considering
+                    the code below:</p>
+                    <script src="https://pastebin.com/embed_js/K79r4eun"></script>
+                <h4>
+                    <a id="Create_Variable_Name_Lookup_50"></a>Create Variable Name Lookup</h4>
+                <p>The first thing the browser does, is create a lookup table of all variable names and function declerations.
+                    So, let’s identify the structure used on each line that
+                    <em>isn’t</em> a console.log call.</p>
+                    <script src="https://pastebin.com/embed_js/iTFxLgN7"></script>
+                <p>The browser will process your code line by line, from the top down.</p>
+                <p>On Line 1: A variable is found. The browser will record the name
+                    <strong>and only the name</strong>. x is now part of the lookup table.</p>
+                <p>On Line 2: A function decleration is found. The browser will record the name
+                    <strong>and the block</strong>. plus() is now part of the lookup table.</p>
+                <h4>
+                    <a id="Execution_63"></a>Execution</h4>
+                <p>Next, the browser will once again look at your code from top to bottom, and execute the code on each line.
+                    If you try to use a something that isn’t part of the look up table, you will get a ReferenceError.</p>
+                <p>On Line 1: Variable x is being defined. I see x is part of the lookup table. x now equals 0.</p>
+                <p>On Line 2: The browser will not go this far as plus() has already been added to the lookup table. Since the
+                    execution process
+                    <em>executes</em> code and this is just a decleration, the browser will do nothing when it gets to this line.</p>
+                <h4>
+                    <a id="Conclusion_70"></a>Conclusion</h4>
+                <p>This was a simple examble. Before looking at more complex examples; let’s look at the let and var keywords.</p>
+                <h1>
+                    <a id="Let__Var_73"></a>Let &amp; Var</h1>
+                <p>In JavaScript versions of yore, the var keyword was the only way to define a variable that wasn’t a class
+                    or a function. Variable is still used in JavaScript, but it’s being phased out because it messes with
+                    the execution context.</p>
+                <p>For instance, the x variable from the example is used before its defined. The let keyword is the updated
+                    version of var, introduced in ES6. The simplest definition of let is it can only be used in its scope.
+                    If it’s defined in the global scope, it can be used globally; if it’s defined in the local scope, it
+                    can only be used locally.</p>
+                <p>Although it seems obvious, var doesn’t always do this. Variables declared with var is bound to the nearest
+                    function, while let is bound to the nearest block. Consider the following example:</p>
+                    <script src="https://pastebin.com/embed_js/e8AHj34y"></script>
+                <p>As you can see, the x variable will still be defined outside of the for loop, because once its defined it’s
+                    bound to the closeset function scope. In this case, it’s variableDifferences. The y variable on the other
+                    hand, isn’t defined outside of the for loop, because its bound to the nearest block. In this case, it’s
+                    the for loop block.</p>
+                <h1>
+                    <a id="The_Stack_ReVisited_94"></a>The Stack Re-Visited</h1>
+                <p>So far we’ve covered how the stack is created and executed; defined the scope and the differences between
+                    the let and var keywords. Now, we bring all the topics together in revisiting how the stack is composed
+                    and executed.</p>
+                <p>General rules for hoisting:</p>
+                <ol>
+                    <li>Add all variable names and function declerations to the lookup table.
+                        <br> i. If the name is already there, don’t add it again.</li>
+                    <li>Execute the code from the top down.
+                        <br> i. If a variable that’s already defined is defined again; change its value.</li>
+                </ol>
+                <h4>
+                    <a id="Consider_the_following_example_104"></a>Consider the following example:</h4>
+                    <script src="https://pastebin.com/embed_js/Sk3XdzQT"></script>
+                <h5>
+                    <a id="Create_Lookup_Table_111"></a>Create Lookup Table</h5>
+                <ol>
+                    <li>ignore console.log(num1) since it’s a function call</li>
+                    <li>Add num1 variable name to the lookup table</li>
+                    <li>Add num2 variable name to the lookup table</li>
+                    <li>ignore console.log(num2) since it’s a function call</li>
+                </ol>
+                <h5>
+                    <a id="Execute_code_117"></a>Execute code</h5>
+                <ol>
+                    <li>Call console.log(num1)</li>
+                    <li>Define num1 as 2</li>
+                    <li>Define num2 as 5</li>
+                    <li>Call console.log(num2);</li>
+                </ol>
+                <h4>
+                    
+                    <a id="Consider_the_following_example_123"></a>Consider the following example:</h4>
+                    <script src="https://pastebin.com/embed_js/hSvc8NRD"></script>
+                <h5>
+                    <a id="Create_Lookup_Table_140"></a>Create Lookup Table</h5>
+                <ol>
+                    <li>add num1 variable name to lookup table</li>
+                    <li>ignore console.log function call</li>
+                    <li>ignore console.log function call</li>
+                    <li>add addition function name and block to lookup table</li>
+                    <li>addition function name already defined
+                        <ul>
+                            <li>Dont’t add it again.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h5>
+                    <a id="Execute_code_148"></a>Execute code</h5>
+                <ol>
+                    <li>reference num1 in lookup table; set its value to 0</li>
+                    <li>call console.log(num1)
+                        <ul>
+                            <li>Display 0 in console</li>
+                        </ul>
+                    </li>
+                    <li>call additon function
+                        <ul>
+                            <li>Display 1</li>
+                        </ul>
+                    </li>
+                    <li>reference addition in lookup table; set its value to function expression block.</li>
+                </ol>
+                <h4>
+                    <a id="Consider_the_following_example_156"></a>Consider the following example:</h4>
+                    <script src="https://pastebin.com/embed_js/rTr617VF"></script>
+                <h5>
+                    <a id="Create_Lookup_Table_171"></a>Create Lookup Table</h5>
+                <ol>
+                    <li>add num1 variable name to lookup table</li>
+                    <li>ignore console.log function call</li>
+                    <li>ignore console.log function call</li>
+                    <li>add addition function name and block to lookup table</li>
+                    <li>addition function name already defined
+                        <ul>
+                            <li>Dont’t add it again.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h5>
+                    <a id="Execute_code_179"></a>Execute code</h5>
+                <ol>
+                    <li>reference num1 in lookup table; set its value to 0</li>
+                    <li>reference addition in lookup table; set its value to function expression block.</li>
+                    <li>call console.log(num1)
+                        <ul>
+                            <li>Display 3</li>
+                        </ul>
+                    </li>
+                </ol>
+                <h1>
+                    <a id="Conclusion_185"></a>Conclusion</h1>
+                <p>Now that we’ve learned so much about hoisting, let’s answer the questions asked at the start of the article.</p>
+                <script src="https://pastebin.com/embed_js/jScekB0F"></script>
+                <ul>
+                    <li>Why is x undefined?
+                        <ul>
+                            <li>Its variable nams is added to the lookup table, but its referenced before its set to anything.</li>
+                        </ul>
+                    </li>
+                    <li>Why is plus defined?
+                        <ul>
+                            <li>plus is a function decleration, so it’s added to the lookup table, along with its block in prior
+                                to the execution.</li>
+                        </ul>
+                    </li>
+                    <li>Why is x undefined when I pass it to console.log, but it is defined when I call plus?
+                        <ul>
+                            <li>By the time the browser reaches this log call, x has been defined in the lookup tablle.</li>
+                        </ul>
+                    </li>
+                </ul>
         </article>
         <div class="top-buffer">
-            <div class="top-buffer">
-                <div class="left-side">
-                    <button type="button" class="btn btn-secondary" id="prev-button">Previous Blog Post</button>
+                <div class="top-buffer">
+                    <div class="left-side">
+                        <button type="button" class="btn btn-secondary" id="prev-button">Previous Blog Post</button>
+                    </div>
+                    <div class="right-side">
+                        <button type="button" class="btn btn-secondary" id="next-button">Next Blog Post</button>
+                    </div>
+        
+                    <div class="clear"></div>
                 </div>
-                <div class="right-side">
-                    <button type="button" class="btn btn-secondary" id="next-button">Next Blog Post</button>
-                </div>
-    
-                <div class="clear"></div>
-            </div>
     </main>
     <hr/>
     <footer>
         Designed &amp; Developed by Naomi Dennis.
     </footer>
-     <script src="../assets/javascript/dynamic_blog.js"></script>
+    <script src="../assets/javascript/dynamic_blog.js"></script>
     <script src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN'
         crossorigin='anonymous'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' integrity='sha384-ApNbgh9B,Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q'
@@ -66,4 +252,5 @@
     <script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5,76PVCmYl'
         crossorigin='anonymous'></script>
 </body>
+
 </html>

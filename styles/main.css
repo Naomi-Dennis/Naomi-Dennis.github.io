@@ -61,7 +61,7 @@ header h2{
     color: rgba(0,0,0,0.3);
     font-style: italic;
 }
-main ul li, section p{
+ section p{
     font-size: 20px; 
     text-align:left;
 }

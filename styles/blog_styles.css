@@ -10,8 +10,7 @@
 .by-line span:first-child{
     padding-right: 8px; 
 }
-article p, article ul li{
-    font-size: 1.25em;
+article p, article ul li, article ol li{
     text-align: left; 
     font-weight: 200; 
 }
@@ -47,7 +46,9 @@ header #article-subtitle{
     font-weight: 400;
     text-align: left; 
     margin: 20px 0px; 
-
+}
+.blog-article h2,.blog-article h3,.blog-article h4,.blog-article h5{
+    text-align: left; 
 }
 .blog-pic{
     width: 100%;
