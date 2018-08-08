@@ -10,9 +10,9 @@ main, footer{
 main h1, main h2, main, footer{
     text-align: center; 
 }
- main h2, .section-title{
-    background: #000;
-    color: white; 
+ main h2{
+    margin-top: 20px; 
+    font-size: 2.5em;
 }
 main .row  div[class^="col-"] .list-container{
     background: #ffffff;
