@@ -1,54 +1,54 @@
 .by-line{
     font-size: 16px;
     color: #9f9595;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 }
 .by-line span:last-child{
     border-left: 1px solid #9f9595;
     padding-left: 10px;
 }
 .by-line span:first-child{
-    padding-right: 8px; 
+    padding-right: 8px;
 }
 article p, article ul li, article ol li{
-    text-align: left; 
-    font-weight: 200; 
+    text-align: left;
+    font-weight: 200;
 }
 article{
-    background: white; 
-    
+    background: white;
+
 }
 header #article-title{
-    text-align: left; 
+    text-align: left;
     font-size: 100px;
 }
 header #article-subtitle{
-    background: unset; 
+    background: unset;
     color: rgba(0,0,0,0.5);
 
 }
 .blog-article{
-    width: 75%;
+    width: 80%;
     margin: 0 auto;
     padding: 30px 30px;
-    font-family: sans-serif; 
+    font-family: sans-serif;
 }
 .blog-article h2{
-    margin: 30px 0px;  
-    color: black; 
+    margin: 30px 0px;
+    color: black;
     background: transparent;
     font-style:unset;
-    text-align:center; 
+    text-align:center;
     text-transform: capitalize;
-    font-weight: 400; 
+    font-weight: 400;
 }
 .blog-article h4{
     font-weight: 400;
-    text-align: left; 
-    margin: 20px 0px; 
+    text-align: left;
+    margin: 20px 0px;
 }
 .blog-article h2,.blog-article h3,.blog-article h4,.blog-article h5{
-    text-align: left; 
+    text-align: left;
 }
 .blog-pic{
     width: 100%;
@@ -63,5 +63,5 @@ header #article-subtitle{
 }
 
 .blog-article code{
-    margin: 20px 0px; 
+    margin: 20px 0px;
 }
