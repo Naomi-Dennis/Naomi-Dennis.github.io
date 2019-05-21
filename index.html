@@ -2,48 +2,47 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/generic_styles.css">
-  <link rel="stylesheet" href="styles/responsive.css">
-  <link rel="stylesheet" href="styles/carousel_changes.css">
-  <link rel="stylesheet" href="styles/index-styles.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/generic_styles.css">
+	<link rel="stylesheet" href="styles/responsive.css">
+	<link rel="stylesheet" href="styles/carousel_changes.css">
+	<link rel="stylesheet" href="styles/index-styles.css">
+	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 
-  <title>Tidbits by Naomi Dennis</title>
+	<title>Tidbits by Naomi Dennis</title>
 </head>
 
 <body>
-  <!-- Nav Bar-->
+	<!-- Nav Bar-->
 
 
-  <nav>
-    <ul class="clear-botttom-gap">
-      <li>
-        <a href="index.html">Home</a>
-      </li>
-      <li>
-        <a href="https://github.com/Naomi-Dennis/" target="_blank">Github</a>
-      </li>
-      <li>
-        <a href="">Portfolio</a>
-      </li>
-      <li>
-        <a href="blog.html">Blog</a>
-      </li>
-      <li>
-        <a href="https://learn.co/Naomi-Dennis/resume" target="_blank">Resume</a>
-      </li>
-    </ul>
-  </nav>
+	<nav>
 
-  <div id="home-page-banner">
-    <img src="assets/images/home/banner.jpg">
+		<ul class="nav justify-content-end">
+     	<li class="nav-item">
+				<a href="" class="nav-link btn btn-secondary rounded-0 " role="button">Portfolio</a>
+			</li>
+			<li class="nav-item">
+				<a href="https://github.com/Naomi-Dennis/" target="_blank" class="nav-link btn btn-secondary rounded-0" role="button">Github</a>
+			</li>
+		
+			<li class="nav-item">
+				<a href="blog.html" class="nav-link btn btn-secondary rounded-0">Blog</a>
+			</li>
+			<li class="nav-item">
+				<a href="https://learn.co/Naomi-Dennis/resume" target="_blank" class="nav-link btn btn-secondary rounded-0 ">Resume</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="home-page-banner">
+		<img src="assets/images/home/banner.jpg">
     <div class="overlay">
       <div class="content">
         <p>Welcome<br/><br/>
@@ -54,19 +53,17 @@
 
   </div>
   <div id="projects">
-    <h2>Projects</h2>
+    <h2>Featured Projects</h2>
     <hr/>
-    <div class="project-display">
-      <div class="description left-side">
-        <p class="title">Simplicity RSS Feed Reader</p>
-        <span class="github-link">
-          <a href="https://github.com/Naomi-Dennis/rails-rss-reader" target="_blank">Github Repository</a>
-        </span>
-        <p class='details'>An RSS feed reader, powered by Rails; Simplicity sports a tablet-friendly design and ease of use. <br/><br/>Add an unlimited
+    <div class="card project-display">
+      <img class="card-img-top" src="assets/images/home/rss-reader-screenshot.jpg">
+      <div class="card-body">
+        <h3 class="card-title">Simplicity RSS Feed Reader</h3>
+        <p class='card-text'>An RSS feed reader, powered by Rails; Simplicity sports a tablet-friendly design and ease of use. <br/><br/>Add an unlimited
           number of RSS feeds using either .xml or .opml files. Don't know what news feeds you want to subscribe to? No problem!
           With our database of over 100 news feeds, our fundamental selection of the most popular news feeds are at your
           disposal; no copy or paste needed.
-          <div class="tech-used">
+           <div class="tech-used">
               <p class="title">Technologies Used</p>
               <div class="tech-icons">
              <i class="devicon-bootstrap-plain colored"></i>
@@ -75,21 +72,24 @@
              <i class="devicon-heroku-line-wordmark colored"></i>
              <i class="devicon-git-plain-wordmark colored"></i>
             </div>
-          </div>
+            <hr/>
+          </div> 
         </p>
-      </div>
+        <a class="btn btn-outline-primary" href="https://github.com/Naomi-Dennis/rails-rss-reader" target="_blank" >Visit</a>
+      </div><!-- end card body -->
       <div class="preview right-side">
-        <img src="assets/images/home/rss-reader-screenshot.jpg">
+      
       </div>
     </div>
     <div class="clear"></div>
-    <div class="project-display">
-      <div class="description left-side">
-        <p class="title">Simplicity Point of Sales System</p>
-        <span class="github-link">
+    <div class="card project-display">
+      <img class="card-img-top" src="assets/images/home/pos-system-old.jpg">
+      <div class="card-body">
+        <h3 class="card-title">Simplicity Point of Sales System</h3>
+        <!-- <span class="github-link">
           <a href="https://github.com/Naomi-Dennis/pos_system" target="_blank">Github Repository</a>
-        </span>
-        <p class='details'> The power of simplicity strikes again with the Simplicity Point of Sales System. Ideal for small and mid-sized commercial entities; this point of sales System
+        </span> -->
+        <p class='card-text'> The power of simplicity strikes again with the Simplicity Point of Sales System. Ideal for small and mid-sized commercial entities; this point of sales System
           sports a tablet friendly design and easy to learn interface.
           <br/><br/>
            Features include: tracking inventory, daily analytics reporting with CSV export and a clocking system for employee tracking.
@@ -106,21 +106,20 @@
              <i class="devicon-git-plain-wordmark colored"></i>
              
             </div>
-          </div>
+             <hr/>
+             <a class="btn btn-outline-primary" href="https://github.com/Naomi-Dennis/pos_system" target="_blank" >Visit</a>
+            
+          </div><!-- end tech used --> 
+         
         </p>
-      </div>
-      <div class="preview right-side">
-        <img src="assets/images/home/pos-system-old.jpg">
-      </div>
+      </div><!-- end card -->
     </div>
     <div class="clear"></div>
-    <div class="project-display">
-      <div class="description left-side">
-        <p class="title">Blitz Photoshop Implementation Test</p>
-        <span class="github-link">
-          <a href="https://github.com/Naomi-Dennis/Front-End-Project-1" target="_blank">Github Repository</a>
-        </span>
-        <p class='details'>A website designed by Blitz and implemented by me. Converted from Photoshop document and implemented with Bootstrap.
+    <div class="card project-display">
+      <div class="card-body">
+        <img class="card-img-top" src="assets/images/home/blitz-screenshot.jpg">
+        <h3 class="card-title">Blitz Photoshop Implementation Test</h3>
+        <p class='card-text'>A website designed by Blitz and implemented by me. Converted from Photoshop document and implemented with Bootstrap.
             <div class="tech-used">
                 <p class="title">Technologies Used</p>
                 <div class="tech-icons">
@@ -129,12 +128,12 @@
                <i class="devicon-git-plain-wordmark colored"></i>
                
               </div>
+              <hr/>
+               <a class="btn btn-outline-primary" href="https://github.com/Naomi-Dennis/Front-End-Project-1" target="_blank" >Visit</a>
             </div>
         </p>
       </div>
-      <div class="preview right-side">
-        <img src="assets/images/home/blitz-screenshot.jpg">
-      </div>
+ 
     </div>
     <div class="clear"></div>
   </div>

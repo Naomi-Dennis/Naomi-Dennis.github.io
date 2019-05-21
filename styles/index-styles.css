@@ -36,7 +36,7 @@
     margin-top: 20px; 
 }
 .project-display{
-    width: 80%;
+    max-width: 70%;
     margin: 0 auto; 
     margin-top: 80px; 
 }
@@ -69,4 +69,12 @@
 }
 .tech-icons{
     margin-top: 20px; 
+}
+
+.tech-used .title{
+ font-weight: bold 
+}
+
+.tech-used hr{
+  border-color: rgba(0,0,0,0.3); 
 }

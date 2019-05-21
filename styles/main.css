@@ -21,6 +21,7 @@ main .row div[class^="col-"] .list-container h3{
     text-align:center; 
     text-decoration:underline; 
 }
+
 nav ul{
     text-align: right;
     background: #000;
@@ -28,19 +29,12 @@ nav ul{
     position: fixed;
     z-index:999;
     padding-bottom: 10px; 
+    padding-top: 10px
 
 }
-nav ul li{
-    display: inline-block; 
-    margin: 0px 20px; 
-    font-size: 1.3em;
-   
-}
-nav ul li a, nav ul li a:visited{
-    text-decoration: none; 
-    color:#fff;
-    
-}
+ nav ul li:last-child{
+   padding-right: 10px; 
+ }
 
 nav ul li:hover{
     text-decoration: underline;
