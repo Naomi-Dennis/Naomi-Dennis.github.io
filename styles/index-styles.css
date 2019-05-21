@@ -17,15 +17,14 @@
 }
 
 #home-page-banner .overlay .content{
-    position: absolute;
     width: 100%;
-    bottom: 50%; 
     text-align:center;
     color: white;
     z-index: 999; 
     font-weight: bold;
     letter-spacing: 1px; 
     font-size: 2em;
+    margin-top: 10%; 
 }
 #projects{
     margin: 0px 40px; 
